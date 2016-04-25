@@ -69,7 +69,8 @@ var _hmt = _hmt || [];
       return false;
     }
       Login();
-   }">
+   }
+其中validForm()方法主要验证用户名，密码，验证码输入是否完全。下面我们来看一下Lo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jeecg系统详解_登录模块">
 <meta property="og:url" content="http://landindream.com/2016/04/22/jeecg_1/index.html">
@@ -79,9 +80,10 @@ var _hmt = _hmt || [];
       return false;
     }
       Login();
-   }">
+   }
+其中validForm()方法主要验证用户名，密码，验证码输入是否完全。下面我们来看一下Lo">
 <meta property="og:image" content="http://7xsvvq.com2.z0.glb.clouddn.com/jeecg1.jpg">
-<meta property="og:updated_time" content="2016-04-23T03:24:19.260Z">
+<meta property="og:updated_time" content="2016-04-25T07:24:50.959Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jeecg系统详解_登录模块">
 <meta name="twitter:description" content="输入账号，密码和验证码，点击登录按钮调用js中CheckUser()方法，对用户信息进行验证。CheckUser()代码如下：function checkUser(){
@@ -89,7 +91,8 @@ var _hmt = _hmt || [];
       return false;
     }
       Login();
-   }">
+   }
+其中validForm()方法主要验证用户名，密码，验证码输入是否完全。下面我们来看一下Lo">
 <meta name="twitter:image" content="http://7xsvvq.com2.z0.glb.clouddn.com/jeecg1.jpg">
 
 
@@ -309,7 +312,7 @@ var _hmt = _hmt || [];
     }
       Login();
    }
-</code></pre></li>
+</code></pre>其中validForm()方法主要验证用户名，密码，验证码输入是否完全。<br>下面我们来看一下Login()方法。<br>首先通过ajax调用checkurl，验证成功后调用actionurl跳转。<br>checkurl：loginController.do?checkuser<br>actionurl：loginController.do?login<br><strong>loginController.do?checkuser流程：</strong><br>1.判断选择的语言种类。<br>2.验证随机码<br>3.判断数据库是否已经初始化<br>4.判断用户名密码的合法性。<br><strong>loginController.do?login流程：</strong><br>1.获取session中的用户。<br>2.通过用户查询用户权限。<br>3.获取页面风格。<br>4.保存cookies。</li>
 </ol>
 </span>
       
