@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="NIO," />
+  <meta name="keywords" content="jeecg," />
 
 
 
@@ -64,22 +64,16 @@ var _hmt = _hmt || [];
  -->
 
 
-<meta name="description" content="JAVA NIO概述Java NIO 由以下几个核心部分组成： 
-– Channels– Buffers– Selectors
-虽然Java NIO 中除此之外还有很多类和组件，但在我看来，Channel，Buffer 和 Selector 构成了核心的API。其它组件，如Pipe和FileLock，只不过是与三个核心组件共同使用的工具类。因此，在概述中我将集中在这三个组件上。其它组件会在单独的章">
+<meta name="description" content="点击访问地址：http://localhost:8080/jeecg/cgDynamGraphController.do?design&amp;amp;id=t_s_log&amp;amp;gtype=LineBasic2D&amp;amp;clickFunctionId=4028ef815378be7c015378e0d39d0006">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java NIO详解">
-<meta property="og:url" content="http://landindream.com/2016/04/15/java-IO/index.html">
+<meta property="og:title" content="jeecg系统详解_移动报表_折线图">
+<meta property="og:url" content="http://landindream.com/2016/04/25/jeecg_2/index.html">
 <meta property="og:site_name" content="梦の地">
-<meta property="og:description" content="JAVA NIO概述Java NIO 由以下几个核心部分组成： 
-– Channels– Buffers– Selectors
-虽然Java NIO 中除此之外还有很多类和组件，但在我看来，Channel，Buffer 和 Selector 构成了核心的API。其它组件，如Pipe和FileLock，只不过是与三个核心组件共同使用的工具类。因此，在概述中我将集中在这三个组件上。其它组件会在单独的章">
-<meta property="og:updated_time" content="2016-04-23T03:23:57.666Z">
+<meta property="og:description" content="点击访问地址：http://localhost:8080/jeecg/cgDynamGraphController.do?design&amp;amp;id=t_s_log&amp;amp;gtype=LineBasic2D&amp;amp;clickFunctionId=4028ef815378be7c015378e0d39d0006">
+<meta property="og:updated_time" content="2016-04-25T07:59:00.934Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java NIO详解">
-<meta name="twitter:description" content="JAVA NIO概述Java NIO 由以下几个核心部分组成： 
-– Channels– Buffers– Selectors
-虽然Java NIO 中除此之外还有很多类和组件，但在我看来，Channel，Buffer 和 Selector 构成了核心的API。其它组件，如Pipe和FileLock，只不过是与三个核心组件共同使用的工具类。因此，在概述中我将集中在这三个组件上。其它组件会在单独的章">
+<meta name="twitter:title" content="jeecg系统详解_移动报表_折线图">
+<meta name="twitter:description" content="点击访问地址：http://localhost:8080/jeecg/cgDynamGraphController.do?design&amp;amp;id=t_s_log&amp;amp;gtype=LineBasic2D&amp;amp;clickFunctionId=4028ef815378be7c015378e0d39d0006">
 
 
 
@@ -91,7 +85,7 @@ var _hmt = _hmt || [];
   };
 </script>
 
-  <title> Java NIO详解 | 梦の地 </title>
+  <title> jeecg系统详解_移动报表_折线图 | 梦の地 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +245,7 @@ var _hmt = _hmt || [];
             
             
               
-                Java NIO详解
+                jeecg系统详解_移动报表_折线图
               
             
           </h1>
@@ -260,8 +254,8 @@ var _hmt = _hmt || [];
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-04-15T15:33:50+08:00" content="2016-04-15">
-              2016-04-15
+            <time itemprop="dateCreated" datetime="2016-04-25T15:41:52+08:00" content="2016-04-25">
+              2016-04-25
             </time>
           </span>
 
@@ -271,8 +265,8 @@ var _hmt = _hmt || [];
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/15/java-IO/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/15/java-IO/" itemprop="commentsCount"></span>
+                <a href="/2016/04/25/jeecg_2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/25/jeecg_2/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -291,16 +285,7 @@ var _hmt = _hmt || [];
       
 
       
-        <span itemprop="articleBody"><h2 id="JAVA-NIO概述"><a href="#JAVA-NIO概述" class="headerlink" title="JAVA NIO概述"></a>JAVA NIO概述</h2><p>Java NIO 由以下几个核心部分组成： </p>
-<p>– Channels<br>– Buffers<br>– Selectors</p>
-<p>虽然Java NIO 中除此之外还有很多类和组件，但在我看来，Channel，Buffer 和 Selector 构成了核心的API。其它组件，如Pipe和FileLock，只不过是与三个核心组件共同使用的工具类。因此，在概述中我将集中在这三个组件上。其它组件会在单独的章节中讲到。 </p>
-<h3 id="Channel-和-Buffer"><a href="#Channel-和-Buffer" class="headerlink" title="Channel 和 Buffer"></a>Channel 和 Buffer</h3><p>基本上，所有的 IO 在NIO 中都从一个Channel 开始。Channel 有点象流。 数据可以从Channel读到Buffer中，也可以从Buffer 写到Channel中。 </p>
-<p>Channel和Buffer有好几种类型。下面是JAVA NIO中的一些主要Channel的实现： </p>
-<p>– FileChannel<br>– DatagramChannel<br>– SocketChannel<br>– ServerSocketChannel<br>正如你所看到的，这些通道涵盖了UDP 和 TCP 网络IO，以及文件IO。 </p>
-<p>与这些类一起的有一些有趣的接口，但为简单起见，我尽量在概述中不提到它们。本教程其它章节与它们相关的地方我会进行解释。 </p>
-<p>以下是Java NIO里关键的Buffer实现： </p>
-<p>– ByteBuffer<br>– CharBuffer<br>– DoubleBuffer<br>– FloatBuffer<br>– IntBuffer<br>– LongBuffer<br>– ShortBuffer<br>这些Buffer覆盖了你能通过IO发送的基本数据类型：byte, short, int, long, float, double 和 char。 </p>
-<p>Java NIO 还有个 Mappedyteuffer，用于表示内存映射文件， 我也不打算在概述中说明。 </p>
+        <span itemprop="articleBody"><p>点击访问地址：<a href="http://localhost:8080/jeecg/cgDynamGraphController.do?design&amp;id=t_s_log&amp;gtype=LineBasic2D&amp;clickFunctionId=4028ef815378be7c015378e0d39d0006" target="_blank" rel="external">http://localhost:8080/jeecg/cgDynamGraphController.do?design&amp;id=t_s_log&amp;gtype=LineBasic2D&amp;clickFunctionId=4028ef815378be7c015378e0d39d0006</a></p>
 </span>
       
     </div>
@@ -309,7 +294,7 @@ var _hmt = _hmt || [];
       
         <div class="post-tags">
           
-            <a href="/tags/NIO/" rel="tag">#NIO</a>
+            <a href="/tags/jeecg/" rel="tag">#jeecg</a>
           
         </div>
       
@@ -318,17 +303,13 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/11/1/" rel="next" title="第一篇帖子~测试下，萌妹纸镇楼">
-                <i class="fa fa-chevron-left"></i> 第一篇帖子~测试下，萌妹纸镇楼
+              <a href="/2016/04/23/2016-4-23/" rel="next" title="Sat Apr 23 2016 00:00:00 GMT+0800 (中国标准时间)">
+                <i class="fa fa-chevron-left"></i> Sat Apr 23 2016 00:00:00 GMT+0800 (中国标准时间)
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/04/22/jeecg_1/" rel="prev" title="jeecg系统详解_登录模块">
-                jeecg系统详解_登录模块 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -378,8 +359,8 @@ var _hmt = _hmt || [];
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/15/java-IO/"
-           data-title="Java NIO详解" data-url="http://landindream.com/2016/04/15/java-IO/">
+      <div class="ds-thread" data-thread-key="2016/04/25/jeecg_2/"
+           data-title="jeecg系统详解_移动报表_折线图" data-url="http://landindream.com/2016/04/25/jeecg_2/">
       </div>
     
   </div>
@@ -529,7 +510,7 @@ var _hmt = _hmt || [];
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JAVA-NIO概述"><span class="nav-number">1.</span> <span class="nav-text">JAVA NIO概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Channel-和-Buffer"><span class="nav-number">1.1.</span> <span class="nav-text">Channel 和 Buffer</span></a></li></ol></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
